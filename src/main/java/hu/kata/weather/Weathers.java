@@ -21,6 +21,6 @@ public class Weathers extends Differentiables<Weather>
     @Override
     public Optional<Weather> getSmallestDifference()
     {
-        return records.stream().min(Comparator.comparing(Weather::getTemperatureSpread));
+        return records.stream().min(Comparator.comparing(Weather::getDifference));
     }
 }

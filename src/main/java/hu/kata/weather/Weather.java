@@ -17,13 +17,9 @@ public class Weather implements Differentiable<Float>
         return new Weather(data[1], Float.parseFloat(data[2]), Float.parseFloat(data[3]));
     }
 
-    public float getTemperatureSpread(){
-        return Math.abs(maximumTemperature - minimumTemperature);
-    }
-
     @Override
     public Float getDifference()
     {
-        return getTemperatureSpread();
+        return Math.abs(maximumTemperature - minimumTemperature);
     }
 }

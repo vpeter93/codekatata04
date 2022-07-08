@@ -17,13 +17,9 @@ public class Soccer implements Differentiable<Integer>
         return new Soccer(data[2], Integer.parseInt(data[7]), Integer.parseInt(data[8]));
     }
 
-    public int getDifferenceForAndAgainstGoals(){
-        return Math.abs(forGoals - againstGoals);
-    }
-
     @Override
     public Integer getDifference()
     {
-        return getDifferenceForAndAgainstGoals();
+        return Math.abs(forGoals - againstGoals);
     }
 }
