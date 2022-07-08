@@ -9,7 +9,7 @@ public class Main {
         weathers.readFromFile(Paths.get("weather.dat"));
         Optional<Weather> smallestOpt = weathers.getSmallestDifference();
         if(smallestOpt.isPresent()){
-            System.out.println(smallestOpt.get().getDay() + " " + smallestOpt.get().getTemperatureSpread());
+            System.out.println(smallestOpt.get().getDay() + " " + smallestOpt.get().getDifference());
         } else{
             System.out.println("Not found data");
         }

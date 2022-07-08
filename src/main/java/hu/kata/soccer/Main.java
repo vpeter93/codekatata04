@@ -10,7 +10,7 @@ public class Main {
         Optional<Soccer> smallestOpt = soccers.getSmallestDifference();
         if(smallestOpt.isPresent()){
             Soccer smallest = smallestOpt.get();
-            System.out.println(smallest.getTeam() + " " + smallest.getDifferenceForAndAgainstGoals());
+            System.out.println(smallest.getTeam() + " " + smallest.getDifference());
         } else{
             System.out.println("Not found data");
         }
