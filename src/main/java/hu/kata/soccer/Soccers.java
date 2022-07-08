@@ -5,12 +5,10 @@ import hu.kata.core.Differentiables;
 import java.util.Comparator;
 import java.util.Optional;
 
-public class Soccers extends Differentiables<Soccer>
-{
+public class Soccers extends Differentiables<Soccer> {
 
     @Override
-    public Soccer fromString(String line)
-    {
+    public Soccer fromString(String line) {
         return Soccer.fromString(line);
     }
 
@@ -20,8 +18,7 @@ public class Soccers extends Differentiables<Soccer>
     }
 
     @Override
-    public Optional<Soccer> getSmallestDifference()
-    {
+    public Optional<Soccer> getSmallestDifference() {
         return records.stream().min(Comparator.comparing(Soccer::getDifference));
     }
 }

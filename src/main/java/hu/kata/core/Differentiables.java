@@ -15,8 +15,7 @@ public abstract class Differentiables<T extends Differentiable> {
     }
 
     public void readFromFile(Path path){
-        try
-        {
+        try {
             List<String> lines = Files.readAllLines(path);
             for(int i = 2; i < lines.size(); i++){
                 String line = formatInputString(lines.get(i));
@@ -28,8 +27,7 @@ public abstract class Differentiables<T extends Differentiable> {
                 }
             }
         }
-        catch (IOException e)
-        {
+        catch (IOException e) {
             e.printStackTrace();
         }
     }

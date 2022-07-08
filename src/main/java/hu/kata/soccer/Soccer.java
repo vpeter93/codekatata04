@@ -6,8 +6,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class Soccer implements Differentiable<Integer>
-{
+public class Soccer implements Differentiable<Integer> {
     private String team;
     private int forGoals;
     private int againstGoals;
@@ -18,8 +17,7 @@ public class Soccer implements Differentiable<Integer>
     }
 
     @Override
-    public Integer getDifference()
-    {
+    public Integer getDifference() {
         return Math.abs(forGoals - againstGoals);
     }
 }

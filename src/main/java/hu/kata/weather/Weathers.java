@@ -5,11 +5,9 @@ import hu.kata.core.Differentiables;
 import java.util.Comparator;
 import java.util.Optional;
 
-public class Weathers extends Differentiables<Weather>
-{
+public class Weathers extends Differentiables<Weather> {
     @Override
-    public Weather fromString(String line)
-    {
+    public Weather fromString(String line) {
         return Weather.fromString(line);
     }
 
@@ -19,8 +17,7 @@ public class Weathers extends Differentiables<Weather>
     }
 
     @Override
-    public Optional<Weather> getSmallestDifference()
-    {
+    public Optional<Weather> getSmallestDifference() {
         return records.stream().min(Comparator.comparing(Weather::getDifference));
     }
 }

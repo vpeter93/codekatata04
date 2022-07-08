@@ -6,8 +6,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class Weather implements Differentiable<Float>
-{
+public class Weather implements Differentiable<Float> {
     private String day;
     private float maximumTemperature;
     private float minimumTemperature;
@@ -18,8 +17,7 @@ public class Weather implements Differentiable<Float>
     }
 
     @Override
-    public Float getDifference()
-    {
+    public Float getDifference() {
         return Math.abs(maximumTemperature - minimumTemperature);
     }
 }
